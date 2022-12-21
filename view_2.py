@@ -21,11 +21,15 @@ def chooseDiceNumber():
 def chooseBetAmount():
     return txt2.get()
 
+def reset():
+    txt1.delete(0,'end')
+    txt2.delete(0,'end')
+
 p = 0
 def showResult(message):
     global p
     p = message
-    lbl3['text'] = f'к-во {p}'
+    lbl3['text'] = f'к-во очков : {p}'
 
 def showDice(diceNumber):
     pass
@@ -38,9 +42,7 @@ txt1 = Entry(window,width=10)
 txt2 = Entry(window,width=10)
 
 btn = Button(window, width=10, text="кинуть кость", command=controller.launch)
-btn1 = Button(window, width=10, text="ввод", command=chooseDiceNumber)
-btn2 = Button(window, width=10, text="ввод", command=chooseBetAmount)
-btn3 = Button(window, width=15, text="сделать ставку", command='click')
+btn3 = Button(window, width=15, text="сбросить", command=reset)
 
 lbl.grid(column=0, row=1)
 lb2.grid(column=0, row=2)
@@ -50,8 +52,6 @@ txt1.grid(column=3, row=1)
 txt2.grid(column=3, row=2)
 
 btn.grid(column=4, row=4)
-btn1.grid(column=4, row=1)
-btn2.grid(column=4, row=2)
 btn3.grid(column=3, row=4)
 
 def getLoop():

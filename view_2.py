@@ -62,6 +62,9 @@ btn3.grid(column=3, row=6)
 def alarm():
     messagebox.showinfo('Ошибка', 'не корректные данные')
 
+def andOfGames():
+    messagebox.showinfo('','Конец игры')
+
 # запуск окна
 def getLoop():
     return window.mainloop

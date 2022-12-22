@@ -1,5 +1,5 @@
 import model
-import view_2 as view
+import view_1 as view
 
 def check(value1, value2):
     if value1 in [1,2,3,4,5,6] and value2 > 0:
@@ -20,17 +20,19 @@ def launch():
 
     if check(choosen_DiceNumber, choosen_BetAmount):
         
-    
         dice_Number = model.throwDice()
-        value = model.calculatePoints(dice_Number, choosen_DiceNumber, choosen_BetAmount)
-       
-
-        view.showResult(value)
-        view.showDice(dice_Number)
+        model.calculatePoints(dice_Number, choosen_DiceNumber, choosen_BetAmount)
+        
+        if model.points:
+            view.showResult(model.points)
+            view.showDice(dice_Number)
+        else:
+            view.andOfGames()    
 
     else:
         view.alarm()
 
+    return model.points
 
 def main():
     view.getLoop()()

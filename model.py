@@ -7,8 +7,9 @@ def getPoints():
 def throwDice():
     return round(Random().random()*5)+1
 
-# сравнение результатов
+
 points = getPoints()
+
 def calculatePoints(diceNumber, choosenDiceNumber, choosenBetAmount):
 
     global points

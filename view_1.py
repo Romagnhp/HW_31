@@ -1,4 +1,5 @@
 import controller
+import model
 
 def getLoop():
     return mainloop
@@ -18,6 +19,9 @@ def showDice(diceNumber):
 def alarm():
     print('Ошибка не корректные данные')
 
+def andOfGames():
+    print('Конец игры вы проиграли')
+
 def mainloop():
-    while True:
+    while model.points:
         controller.launch()

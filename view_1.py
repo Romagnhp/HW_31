@@ -15,6 +15,9 @@ def showResult(message):
 def showDice(diceNumber):
     print(f'Кость - {diceNumber}')
 
+def alarm():
+    print('Ошибка не корректные данные')
+
 def mainloop():
     while True:
         controller.launch()

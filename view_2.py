@@ -1,6 +1,8 @@
 # импорт всех классов из библиотеки  Tk
 from tkinter import *
 
+from tkinter import messagebox
+
 import model
 import controller
 
@@ -56,6 +58,9 @@ txt1.grid(column=3, row=1)
 txt2.grid(column=3, row=2)
 btn.grid(column=4, row=6)
 btn3.grid(column=3, row=6)
+
+def alarm():
+    messagebox.showinfo('Ошибка', 'не корректные данные')
 
 # запуск окна
 def getLoop():

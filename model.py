@@ -8,19 +8,23 @@ def throwDice():
     return round(Random().random()*5)+1
 
 # сравнение результатов
-def calculatePoints(diceNumber, choosenDiceNumber, choosenBetAmount, points):
+points = getPoints()
+def calculatePoints(diceNumber, choosenDiceNumber, choosenBetAmount):
 
-    temp = points
+    global points
 
     if diceNumber == 6:
-        temp = points + 3
+        points += 3
     else:
-        temp = temp - 1
+        points -= 1
 
     if diceNumber == choosenDiceNumber:
-        temp = temp + (3*choosenBetAmount)
+        points += (3*choosenBetAmount)
     else:
-        temp = temp - choosenBetAmount
+        points -= choosenBetAmount
+
+    if points <= 0:
+        points = False
     
-    return temp
+    return points
 

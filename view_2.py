@@ -3,7 +3,6 @@ from tkinter import *
 
 from tkinter import messagebox
 
-import model
 import controller
 
 # создание окна
@@ -38,7 +37,7 @@ def showDice(diceNumber):
 # создание виджетов класса Label(отображение текстовой инф.)
 lbl = Label(window, width=25, anchor="w",  text="Выберите кость")
 lb2 = Label(window,width=25, anchor='w', text="Введите величину ставки")
-lbl3 = Label(window, width=25,anchor='w', text = f'к-во очков : {model.getPoints()}')
+lbl3 = Label(window, width=25,anchor='w', text = f'к-во очков : {controller.temp}')
 lbl4 = Label(window, width=25, anchor='w', text='кость :')
 
 # создание виджетов класса Entry(для ввода текстовой инф.)

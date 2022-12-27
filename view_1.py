@@ -1,5 +1,5 @@
 import controller
-import model
+
 
 def getLoop():
     return mainloop
@@ -23,5 +23,5 @@ def andOfGames():
     print('Конец игры вы проиграли')
 
 def mainloop():
-    while model.points:
+    while controller.temp:
         controller.launch()

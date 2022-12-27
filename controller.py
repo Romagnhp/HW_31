@@ -1,5 +1,7 @@
 import model
-import view_1 as view
+import view_2 as view
+
+temp = model.getPoints()
 
 def check(value1, value2):
     if value1 in [1,2,3,4,5,6] and value2 > 0:
